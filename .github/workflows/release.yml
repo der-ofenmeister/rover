@@ -41,7 +41,7 @@ jobs:
       version: ${{ steps.get_version.outputs.version }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Query version number
         id: get_version
@@ -235,7 +235,7 @@ jobs:
       registry-url: 'https://registry.npmjs.org'
       is-prerelease: ${{ contains(needs.build.outputs.version, 'alpha') || contains(needs.build.outputs.version, 'beta') || contains(needs.build.outputs.version, 'rc')|| contains(needs.build.outputs.version, 'test')}}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download artifacts
         uses: actions/download-artifact@v2

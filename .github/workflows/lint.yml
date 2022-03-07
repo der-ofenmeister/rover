@@ -7,7 +7,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Check for broken Markdown links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
