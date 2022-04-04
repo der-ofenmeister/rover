@@ -51,7 +51,7 @@ jobs:
           echo ::set-output name=version::"${GITHUB_REF:10}"
         
       - name: Install Node and npm
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: '14'
 
@@ -343,7 +343,7 @@ jobs:
           asset_name: rover-${{ needs.build.outputs.version }}-${{ env.MACOS_TARGET }}.tar.gz
 
       - name: Set up .npmrc
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: ${{ env.node-version }}
           registry-url: ${{ env.registry-url }}
